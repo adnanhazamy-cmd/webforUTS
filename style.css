@@ -1,0 +1,230 @@
+/* ==========================================================================
+   1. RESET & PENGATURAN DASAR (GLOBAL STYLES)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc; /* Latar belakang abu-abu sangat muda (modern) */
+    color: #1e293b;            /* Warna teks gelap agar nyaman dibaca */
+    line-height: 1.6;          /* Jarak antar baris teks */
+    padding: 20px;
+}
+
+/* ==========================================================================
+   2. NAVIGASI (NAVBAR)
+   ========================================================================== */
+nav {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto 20px auto;  /* Posisi di tengah dengan jarak bawah 20px */
+    padding: 10px 25px;
+    border-radius: 12px;       /* Sudut membulat */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+    text-align: center;
+    color: #cbd5e1;            /* Warna tanda pemisah '|' agar lebih kalem */
+}
+
+nav a {
+    text-decoration: none;     /* Menghilangkan garis bawah standar link */
+    color: #334155;
+    font-weight: 600;
+    margin: 0 12px;            /* Jarak kiri-kanan antar menu */
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease; /* Efek transisi halus saat kursor diarahkan */
+}
+
+nav a:hover {
+    background-color: #e0f2fe; /* Warna latar biru muda saat disentuh kursor */
+    color: #0284c7;            /* Warna teks biru cerah */
+}
+
+/* ==========================================================================
+   3. GARIS PEMISAH (HR)
+   ========================================================================== */
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    max-width: 800px;
+    margin: 25px auto;
+}
+
+/* ==========================================================================
+   4. HEADER & FOTO PROFIL (KHUSUS INDEX.HTML)
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+header img {
+    max-width: 180px;          /* Membatasi ukuran foto agar proporsional */
+    height: auto;
+    border-radius: 15% !important; /* Membuat foto jadi bulat penuh */
+    border: 2px solid #38bdf8; /* Bingkai biru modern di sekeliling foto */
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   5. KONTEN UTAMA (ARTICLE & DIV CONTAINER)
+   ========================================================================== */
+article, body > div {
+    background-color: #ffffff;
+    max-width: 800px !important; /* Menyamakan lebar semua kotak konten */
+    margin: 20px auto !important;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+article h1, article h2, body > div h1 {
+    color: #0f172a;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e0f2fe;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+article p {
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+/* ==========================================================================
+   6. TABEL SKILLS & PENGALAMAN (INDEX.HTML)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menggabungkan garis batas ganda menjadi satu */
+    margin-top: 10px;
+    border: none;              /* Menghilangkan border bawaan HTML */
+}
+
+th {
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Membuat sudut atas tabel ikut membulat */
+th:first-child {
+    border-top-left-radius: 8px;
+}
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+td {
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;       /* Teks rata atas jika tinggi kolom berbeda */
+}
+
+td ul {
+    padding-left: 20px;        /* Memberi ruang untuk titik bullet list */
+}
+
+td li {
+    margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   7. FORMULIR KONTAK (CONTACT.HTML)
+   ========================================================================== */
+form {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: 600;
+    color: #334155;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+input[type="email"], textarea {
+    width: 100%;               /* Lebar penuh mengikuti kotak container */
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;      /* Menyamakan jenis font dengan body */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+textarea {
+    min-height: 120px;         /* Tinggi minimal kotak pesan */
+    resize: vertical;          /* Hanya bisa ditarik memanjang ke bawah */
+}
+
+/* Efek saat kotak input diklik */
+input[type="email"]:focus, textarea:focus {
+    outline: none;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+input[type="submit"] {
+    background-color: #0284c7;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;           /* Mengubah kursor menjadi ikon tangan */
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0369a1; /* Biru lebih gelap saat tombol disentuh */
+}
+
+/* ==========================================================================
+   8. VIDEO PLAYER (ABOUT.HTML)
+   ========================================================================== */
+video {
+    width: 100%;               /* Responsif mengikuti lebar layar/kotak */
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+footer {
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    padding: 15px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
